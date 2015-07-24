@@ -1,5 +1,14 @@
-ONE-STEP INSTALL
-----------------
+## pre-requisites
+
+**Ubuntu:**
+
+    sudo apt-get install exuberant-ctags
+
+**OSX:**
+
+    brew install ctags-exuberant
+
+## ONE-STEP INSTALL
 
 Use curl (for Mac OS X):
 
