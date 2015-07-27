@@ -68,10 +68,6 @@ set nobackup
 set noswapfile
 set foldlevel=99
 
-if has("statusline")
-    set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
-endif
-
 """ VUNDLE
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim/
@@ -84,6 +80,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'spf13/vim-colors'
 Plugin 'joonty/vdebug'
 Plugin 'majutsushi/tagbar'
+" statusbar
+Plugin 'bling/vim-airline'
 
 call vundle#end()
 filetype plugin indent on     " required!
@@ -97,11 +95,16 @@ let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 """ vdebug
 "
 let g:vdebug_options = {}
-let g:vdebug_options["port"] = 9001
 let g:vdebug_options["break_on_open"] = 1
 let g:vdebug_options["server"] = "127.0.0.1"
 let g:vdebug_options["timeout"] = 20
-let g:vdebug_options["ide_key"] = "vmattos"
+
+""" Vim-AirLine
+"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline_section_b = '%{strftime("%D %k:%M")}'
 
 """ syntastic
 "
@@ -111,17 +114,15 @@ let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': ['python', 'php'],
                            \ 'passive_filetypes': ['puppet'] }
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_post_args='--ignore=E501,E128,E225'
 
 """ Colors
 "
 silent!colorscheme molokai
-set colorcolumn=99
 set t_Co=256
 syntax on
 set cursorline
-hi ColorColumn ctermbg=red guibg=red
+let &colorcolumn=join(range(81,999),",")
+hi ColorColumn ctermbg=234
 hi TabLineFill ctermfg=LightGray ctermbg=Black
 hi TabLine ctermfg=Gray ctermbg=Black
 hi TabLineSel ctermfg=White ctermbg=Red
@@ -130,13 +131,13 @@ hi visual ctermfg=black ctermbg=lightblue
 
 """ Highlight excess line length
 "
-augroup vimrc_autocmds
-    autocmd!
-    " highlight characters past column 99
-    autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
-    autocmd FileType python match Excess /\%99v.*/
-    autocmd FileType python set nowrap
-augroup END
+"augroup vimrc_autocmds
+"    autocmd!
+"    " highlight characters past column 99
+"    autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
+"    autocmd FileType python match Excess /\%99v.*/
+"    autocmd FileType python set nowrap
+"augroup END
 
 " Indent/unindent highlighted block (and maintain highlight)
 "
