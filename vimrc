@@ -82,6 +82,9 @@ Plugin 'joonty/vdebug'
 Plugin 'majutsushi/tagbar'
 " statusbar
 Plugin 'bling/vim-airline'
+" NERD Tree
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 call vundle#end()
 filetype plugin indent on     " required!
@@ -91,6 +94,10 @@ filetype on
 " F3 toogles TabBar
 nmap <F3> :TagbarToggle<CR>
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+
+" NERD Tree
+" LF finds the current file in the tree
+nmap LF :NERDTreeFind<CR>
 
 """ vdebug
 "
