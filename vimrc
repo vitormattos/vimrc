@@ -102,8 +102,10 @@ nmap LF :NERDTreeFind<CR>
 """ vdebug
 "
 let g:vdebug_options = {}
-let g:vdebug_options["break_on_open"] = 1
+let g:vdebug_options["continuous_mode"] = 1
+let g:vdebug_options["break_on_open"] = 0
 let g:vdebug_options["server"] = "127.0.0.1"
+let g:vdebug_options["port"] = 9001
 let g:vdebug_options["timeout"] = 20
 
 """ Vim-AirLine
