@@ -85,6 +85,7 @@ Plugin 'bling/vim-airline'
 " NERD Tree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'lervag/vimtex'
 
 call vundle#end()
 filetype plugin indent on     " required!
