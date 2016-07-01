@@ -89,6 +89,8 @@ Plugin 'lervag/vimtex'
 " Vim Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+" Vim Json
+Plugin 'elzr/vim-json'
 
 call vundle#end()
 filetype plugin indent on     " required!
@@ -109,7 +111,8 @@ let g:vdebug_options = {}
 let g:vdebug_options["continuous_mode"] = 1
 let g:vdebug_options["break_on_open"] = 0
 let g:vdebug_options["server"] = "127.0.0.1"
-let g:vdebug_options["port"] = 9000
+let g:vdebug_options["var_display_max_children"] = "128"
+let g:vdebug_options["port"] = 9001
 let g:vdebug_options["timeout"] = 20
 
 """ Vim-AirLine
