@@ -11,3 +11,4 @@ vim +PluginInstall +qall
 sudo npm -g install instant-markdown-d
 mkdir -p ~/.vim/after
 curl -o ~/.vim/after/ftplugin/markdown/instant-markdown.vim https://github.com/suan/vim-instant-markdown/raw/master/after/ftplugin/markdown/instant-markdown.vim
+reset
