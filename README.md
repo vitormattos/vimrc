@@ -2,7 +2,7 @@
 
 **Ubuntu:**
 
-    sudo apt-get install vim git exuberant-ctags
+    sudo apt-get install vim git exuberant-ctags vim-gtk
 
 **OSX:**
 
