@@ -89,6 +89,7 @@ Plugin 'lervag/vimtex'
 " Vim Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'shime/vim-livedown'
 " Vim Json
 Plugin 'elzr/vim-json'
 

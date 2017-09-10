@@ -2,7 +2,7 @@
 
 **Ubuntu:**
 
-    sudo apt-get install vim git exuberant-ctags vim-gtk
+    sudo apt-get install vim git exuberant-ctags vim-gtk nodejs npm
 
 **OSX:**
 
@@ -17,3 +17,9 @@ Use curl (for Mac OS X):
 or wget (for most UNIX platforms):
 
      wget -O - https://raw.githubusercontent.com/vitormattos/vimrc/master/install.sh | sh
+
+## Livedown-vim
+
+Read:
+
+https://github.com/shime/vim-livedown
